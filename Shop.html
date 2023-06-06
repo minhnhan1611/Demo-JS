@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap"
+        rel="stylesheet">
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/dist/pageshop.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div!-->
+        <!-- Header -->
+        <div class="container">
+            <div class="row header-form align-items-center">
+                <div class="col col-xl-3 col-lg-3 col-md-3 col-xs-3">
+                    <a class="navbar-brand" href="./HomePage.html">
+                        <img src="./assets/img/Logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="col col-xl-5 col-lg-5 col-md-2 col-xs-2">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-end">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./HomePage.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Page
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./HomePage.html">Home</a></li>
+                                        <li><a class="dropdown-item" href="#">About</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="./Shop.html">Shop</a></li>
+                                        <li><a class="dropdown-item" href="#">Projects</a></li>
+                                        <li><a class="dropdown-item" href="#">News</a></li>
+                                        <li><a class="dropdown-item" href="./Contact.html">Contact</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Shop.html">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">News</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col col-xl-4 col-lg-4 col-md-7 col-xs-7 d-flex flex-row justify-content-evenly">
+                    <form class="d-md-flex d-none d-md-block mr-4" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                    <div class="d-flex flex-row align-items-center header-cart" data-bs-toggle="modal"
+                        data-bs-target="#cart">
+                        <i class="bi bi-cart"></i>
+                        <span id="cartItemCount">(0)</span> Cart
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body cartModal">
+                        <table class="table table-striped">
+
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner -->
+        <div class="container-fluid fullscreen">
+            <div class="banner-background">
+                <div class="display-text">
+                    <p>Shop</p>
+                </div>
+            </div>
+        </div>
+        <!-- Shop -->
+        <div class="container">
+            <div class="shop-product">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-xs-12 categories-product" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <div class="product-tag">
+                            Fresh
+                        </div>
+                        <div class="product-image">
+                            <img src="./assets/img/cucumber.png" alt="rusk">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-content_name">
+                                <p> Mung Bean </p>
+                            </div>
+                            <hr>
+                            <div class="product-rating d-flex flex-row justify-content-between">
+                                <div class="product-price d-flex flex-row">
+                                    <span class="product-price_old">
+                                        $20.00
+                                    </span>
+                                    <div class="product-price_new">
+                                        $15.00
+                                    </div>
+                                </div>
+                                <div class="product-start">
+                                    <img src="./assets/img/start.jpg" alt="start">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-xs-12 categories-product" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <div class="product-tag">
+                            Fresh
+                        </div>
+                        <div class="product-image">
+                            <img src="./assets/img/whitehazeinut.png" alt="rusk">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-content_name">
+                                <p>White Hazelnut</p>
+                            </div>
+                            <hr>
+                            <div class="product-rating d-flex flex-row justify-content-between">
+                                <div class="product-price d-flex flex-row">
+                                    <span class="product-price_old">
+                                        $20.00
+                                    </span>
+                                    <div class="product-price_new">
+                                        $15.00
+                                    </div>
+                                </div>
+                                <div class="product-start">
+                                    <img src="./assets/img/start.jpg" alt="start">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-xs-12 categories-product" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <div class="product-tag">
+                            Fresh
+                        </div>
+                        <div class="product-image">
+                            <img src="./assets/img/mealies.png" alt="rusk">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-content_name">
+                                Fresh Corn
+                            </div>
+                            <hr>
+                            <div class="product-rating d-flex flex-row justify-content-between">
+                                <div class="product-price d-flex flex-row">
+                                    <span class="product-price_old">
+                                        $20.00
+                                    </span>
+                                    <div class="product-price_new">
+                                        $15.00
+                                    </div>
+                                </div>
+                                <div class="product-start">
+                                    <img src="./assets/img/start.jpg" alt="start">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-xs-12 categories-product" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <div class="product-tag">
+                            Fresh
+                        </div>
+                        <div class="product-image">
+                            <img src="./assets/img/almonds.png" alt="rusk">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-content_name">
+                                Organic Almonds
+                            </div>
+                            <hr>
+                            <div class="product-rating d-flex flex-row justify-content-between">
+                                <div class="product-price d-flex flex-row">
+                                    <span class="product-price_old">
+                                        $20.00
+                                    </span>
+                                    <div class="product-price_new">
+                                        $15.00
+                                    </div>
+                                </div>
+                                <div class="product-start">
+                                    <img src="./assets/img/start.jpg" alt="start">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popup Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Info Product</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="product-preview">
+                            <div class="container" data-target="p-1">
+                                <div class="row">
+                                    <div class="col-6 preview-info">
+                                        <div class="preview_tag">
+                                            <p>tag</p>
+                                        </div>
+                                        <div class="preview-img">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="preview-content">
+                                            <div class="preview-content_title">
+                                                <p>name</p>
+                                                <img src="./assets/img/start.jpg" alt="start">
+                                                <div class="product-price d-flex flex-row">
+                                                    <span class="product-price_old">
+                                                        price_old
+                                                    </span>
+                                                    <div class="product-price_new">
+                                                        price_new
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="preview-content_body">
+                                                <p>description</p>
+                                            </div>
+                                            <div class="preview-content_button d-md-flex flex-row">
+                                                <p>Quantity: </p>
+                                                <div class="button-quantity d-flex flex-row">
+                                                    <button id="decreaseBtn">-</button>
+                                                    <input type="number" id="quantityInput" value="1" min="1">
+                                                    <button id="increaseBtn">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="preview-button">
+                                                <button id="addButton" class="btn">Add To Cart <i
+                                                        class="bi bi-arrow-right-short"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newslatteer -->
+        <div class="container">
+            <div class="row w-100 newslatteer-row">
+                <div class="col-12 newslatteer">
+                    <img src="./assets/img/newslateer.jpg" alt="newslateer">
+                    <div class="newslatteer-content d-flex flex-row align-items-center justify-content-between">
+                        <div class="newslatteer-content_heading">
+                            <p>Subscribe to our Newsletter</p>
+                        </div>
+                        <div class="newslatteer-content_button d-flex flex-row justify-content-start">
+                            <div class="newslatteer-content_mail">
+                                <input type="text" placeholder="Your Email Address">
+                            </div>
+                            <div class="newslatteer-content_submit">
+                                <button class="btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="w-100">
+            <div class="container footer-container">
+                <div class="row footer">
+                    <div class="col-xl-3 col-md-3 col-xs-12 p-0">
+                        <div class="footer-contact">
+                            <div class="footer-contact_title">
+                                <p>Contact Us</p>
+                            </div>
+                            <div class="footer-contact_body">
+                                <div class="footer-contact_contact">
+                                    <span>Email</span> <br> needhelp@Organia.com <br>
+                                </div>
+                                <div class="footer-contact_contact">
+                                    <span>Phone</span> <br> 666 888 888 <br>
+                                </div>
+                                <div class="footer-contact_contact">
+                                    <span>Address</span> <br> 88 road, borklyn street, USA
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-xs-12 p-0 footer-organick_layout">
+                        <div class="footer-organick text-center">
+                            <div class="footer-organick_title">
+                                <img src="./assets/img/Logo.png" alt="Logo">
+                            </div>
+                            <div class="footer-organick_body">
+                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy
+                                text of the
+                                printing
+                                <div class="footer-organick_body_follow d-flex flex-row justify-content-evenly mt-4">
+                                    <img src="./assets/img/Insta.png" alt="Insta">
+                                    <img src="./assets/img/Fb.png" alt="Fb">
+                                    <img src="./assets/img/Twiter.png" alt="Twiter">
+                                    <img src="./assets/img/Pintrest.png" alt="Pintrest">
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 col-xs-12 p-0 footer-page_layout">
+                        <div class="footer-page">
+                            <div class="footer-page_title">
+                                Utility Pages
+                            </div>
+                            <div class="footer-page_body">
+                                Style Guide <br>
+                                404 Not Found <br>
+                                Password Protected <br>
+                                Licences Changelog
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row footer-copyright">
+                    <div class="col-12">
+                        <hr>
+                        <div class="footer-copyright_content text-center">
+                            Copyright © <i>Organick</i> | Designed by <i>VictorFlow</i> Templates - Powered by
+                            <i>Webflow</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <script src="main.js"></script>
+        <script src="getProducts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
